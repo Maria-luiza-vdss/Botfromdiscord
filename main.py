@@ -4,7 +4,7 @@ import discord
 from discord.ext import commands
 
 # Pega o token da variável de ambiente (Render)
-TOKEN = os.environ["TOKEN"]
+TOKEN = os.environ['TOKEN']
 
 # Intents obrigatórios
 intents = discord.Intents.default()
@@ -141,7 +141,8 @@ async def loop_eventos():
 async def teste(ctx):
     await ctx.send("✅ Bot de Eventos funcionando!")
 
-bot.run("TOKEN")
+bot.run(tOKEN)
+
 
 
 
