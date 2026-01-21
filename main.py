@@ -4,7 +4,7 @@ from discord.ext import commands
 import asyncio
 import random
 
-TOKEN = ("MTQ2MzIzNjEyODM1MzAzMDM0Mg.Gil2Vo.SMGzeBSDoVi3tX4RYzEFFpPJUAhUvjprt1hUck")
+TOKEN = ()
 CANAL_ID = 1463230667323211849
 
 
@@ -128,4 +128,5 @@ async def teste(ctx):
     await ctx.send("✅ Bot de Eventos funcionando!")
 
 # ================== START ==================
-bot.run("MTQ2MzIzNjEyODM1MzAzMDM0Mg.Gil2Vo.SMGzeBSDoVi3tX4RYzEFFpPJUAhUvjprt1hUck")
+bot.run()
+
