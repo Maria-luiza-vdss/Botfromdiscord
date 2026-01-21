@@ -3,16 +3,23 @@ import os
 import discord
 from discord.ext import commands
 
-TOKEN = os.environ['TOKEN'] 
+# Pega o token da variável de ambiente (Render)
+TOKEN = os.environ["TOKEN"]
 
+# Intents obrigatórios
 intents = discord.Intents.default()
-bot = commands.Bot(command_prefix='!', intents=intents)
+intents.message_content = True  # importante para comandos
 
+# Criação do bot
+bot = commands.Bot(command_prefix="!", intents=intents)
 
-import discord
-from discord.ext import commands
-import asyncio
-import random
+@bot.event
+async def on_ready():
+    print(f"✅ {bot.user} está online!")
+
+@bot.command()
+async def ping(ctx):
+    await ctx.send("Pong!")
 
 TOKEN = ()
 CANAL_ID = 1463230667323211849
@@ -135,6 +142,7 @@ async def teste(ctx):
     await ctx.send("✅ Bot de Eventos funcionando!")
 
 bot.run("TOKEN")
+
 
 
 
