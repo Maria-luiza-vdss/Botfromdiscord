@@ -128,5 +128,7 @@ async def teste(ctx):
     await ctx.send("✅ Bot de Eventos funcionando!")
 
 # ================== START ==================
-bot.run()
+bot.run(TOKEN)
+
+
 
