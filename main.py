@@ -1,4 +1,14 @@
 
+import os
+import discord
+from discord.ext import commands
+
+TOKEN = os.environ['TOKEN'] 
+
+intents = discord.Intents.default()
+bot = commands.Bot(command_prefix='!', intents=intents)
+
+
 import discord
 from discord.ext import commands
 import asyncio
@@ -8,7 +18,6 @@ TOKEN = ()
 CANAL_ID = 1463230667323211849
 
 
-# Lista de eventos
 eventos = [
     {
         "titulo": "🚗 Acidente leve na zona sul",
@@ -85,7 +94,6 @@ eventos = [
     }
 ]
 
-# ================== BOT ==================
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
@@ -122,13 +130,13 @@ async def loop_eventos():
 
             await canal.send(embed=embed)
 
-# Comando de teste
 @bot.command()
 async def teste(ctx):
     await ctx.send("✅ Bot de Eventos funcionando!")
 
-# ================== START ==================
-bot.run(TOKEN)
+bot.run("TOKEN")
+
+
 
 
 
