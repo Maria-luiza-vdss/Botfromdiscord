@@ -141,7 +141,8 @@ async def loop_eventos():
 async def teste(ctx):
     await ctx.send("✅ Bot de Eventos funcionando!")
 
-bot.run(tOKEN)
+bot.run(TOKEN)
+
 
 
 
